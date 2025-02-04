@@ -1,0 +1,166 @@
+*{
+    min-width: 0;
+    font: inherit;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+img,
+video,
+svg{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+body{
+    margin: 10px;
+    min-height: 100dvh;
+}
+h1,
+h2,
+h3{
+    text-wrap: balance;
+}
+p{
+    text-wrap: pretty;
+}
+body{
+    background-color: rgb(229, 229, 203);
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+   justify-content: center;
+   align-items: center;
+   height: 150vh;
+   
+}
+.container-letter{
+    position: relative;
+}
+.cover{
+    position: absolute;
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-top: 200px solid rgba(251, 1, 1, 0.999);
+    border-bottom: 150px solid transparent;
+    transition: transform .75s;
+    transform-origin: top;
+}
+.titulo{
+    text-align: center;
+}
+.Final{
+    text-align: center;
+}
+.paper{
+    text-decoration:dotted;
+    text-align: justify;
+    padding: 1.5rem;
+    position: absolute;
+    line-height: 2rem;
+    z-index: -1;
+    background: white;
+    width: 600px;
+    height: 447px;
+    transition: all .75s;
+}
+.letter{
+    border-left: 300px solid rgb(237, 152, 152);
+    border-right: 300px solid rgb(237, 152, 152);
+    border-top: 200px solid transparent ;
+    border-bottom: 200px solid rgb(239, 131, 131);
+}
+.relleno{
+    border-bottom: 48px solid rgb(239, 131, 131);
+}
+.options{
+    display: flex;
+    gap: 5rem;
+    & button{
+        color: #ff3234;
+        font-weight: 600;
+        border-radius: 3px;
+        background: solid beige;
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(255, 0, 0, 0.999);
+        cursor: pointer;
+    }
+    & button:hover{
+        background: #ffcacb;
+        color: white;
+    }
+}
+.open-cover{
+    transform: rotateX(180deg);
+}
+.open-paper{
+    animation: openPaper .5s forwards;
+}
+
+@keyframes openPaper{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -250px;
+    }
+}
+.close-paper{
+    animation: closePaper .5s forwards;
+}
+
+@keyframes closePaper{
+    0%{
+        top: -250px;
+    }
+    100%{
+        top: 0;
+    }
+}
+.heart{
+    display: none;
+    position: absolute;
+    left: 45%;
+    top: 35.7%;
+    margin: auto;
+    font-size: 3rem;
+    animation: crecer 1s forwards;
+    color: solid rgba(251, 1, 1, 0.999);
+}
+.cora{
+    position: absolute;
+    left: 41%;
+    top: 33%;
+    margin: auto;
+    font-size: 5rem;
+}
+@keyframes crecer{
+    0%{
+        scale: 1;
+        opacity: 1;
+    }
+    100%{
+        scale: 10;
+        opacity: 0;
+    }
+}
+.dedica{
+    position: absolute;
+    left: 40%;
+    top: 60%;
+    margin: auto;
+    font-size: 1rem;
+}
+.dedicar{
+    position: absolute;
+    left: 40%;
+    top: 65%;
+    margin: auto;
+    font-size: 1rem;
+}
